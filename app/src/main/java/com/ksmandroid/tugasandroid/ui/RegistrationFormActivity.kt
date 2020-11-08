@@ -7,7 +7,6 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.RadioButton
-import android.widget.RadioGroup
 import com.ksmandroid.tugasandroid.R
 import kotlinx.android.synthetic.main.activity_registration_form.*
 
@@ -32,7 +31,6 @@ class RegistrationFormActivity : AppCompatActivity(), View.OnClickListener {
             birthDateMonth = et_bulan_lahir_item_registration_form.text.toString().trim()
             birthDateYear = et_tahun_lahir_item_registration_form.text.toString().trim()
 
-            getRadioText()
             enableSaveBtn()
         }
 
@@ -47,6 +45,10 @@ class RegistrationFormActivity : AppCompatActivity(), View.OnClickListener {
         et_name_item_registration_form.addTextChangedListener(inputData)
         et_nim_item_registration_form.addTextChangedListener(inputData)
         et_jurusan_item_registration_form.addTextChangedListener(inputData)
+        rbg_jenis_kelamin_registration_form.setOnCheckedChangeListener { _, radiobutton ->
+            val userGender: RadioButton = findViewById(radiobutton)
+            this.userGender = userGender.text.toString().trim()
+        }
         et_alamat_item_registration_form.addTextChangedListener(inputData)
         et_tanggal_lahir_item_registration_form.addTextChangedListener(inputData)
         et_bulan_lahir_item_registration_form.addTextChangedListener(inputData)
@@ -58,14 +60,6 @@ class RegistrationFormActivity : AppCompatActivity(), View.OnClickListener {
     private fun initiateUI() {
         btn_back_registration_form.setOnClickListener(this)
         btn_save_registration_form.setOnClickListener(this)
-    }
-
-    private fun getRadioText() {
-        rbg_jenis_kelamin_registration_form.setOnCheckedChangeListener(RadioGroup.OnCheckedChangeListener() {
-                radioGroup, i ->
-            val radio: RadioButton = findViewById(i)
-            userGender = radio.text.toString().trim()
-        })
     }
 
     private fun enableSaveBtn() {
@@ -80,8 +74,7 @@ class RegistrationFormActivity : AppCompatActivity(), View.OnClickListener {
         ) {
             btn_save_registration_form.setBackgroundColor(getColor(R.color.colorGrayLighter))
             btn_save_registration_form.setTextColor(getColor(R.color.colorWhite))
-        }
-        else if (userName.isEmpty() && userAddress.isEmpty() &&
+        } else if (userName.isEmpty() && userAddress.isEmpty() &&
             userId.isEmpty() && userMajor.isEmpty() && birthDateDay.isEmpty()
             && birthDateMonth.isEmpty() && birthDateYear.isEmpty()
         ) {
