@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".ui.DisplayFormActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back_display_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_display_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/title_display_form"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/btn_back_display_form"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_display_form">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_nama"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name_item_display_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/hint_nama"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nim_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_nim"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_item_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nim_item_display_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/hint_nim"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nim_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jurusan_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_jurusan"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nim_item_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jurusan_item_display_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/hint_jurusan"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jurusan_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jenis_kelamin_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_jenis_kelamin"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jurusan_item_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jenis_kelamin_item_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/hint_jenis_kelamin"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jenis_kelamin_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_alamat_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_alamat"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jenis_kelamin_item_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_alamat_item_display_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/hint_alamat"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alamat_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_tanggal_lahir_display_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_tanggal_lahir"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_alamat_item_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_tanggal_lahir_item_display_form"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/tanggal"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_bulan_lahir_item_display_form"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/bulan"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_tanggal_lahir_item_display_form"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_display_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_tahun_lahir_item_display_form"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:text="@string/tahun"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tv_bulan_lahir_item_display_form"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_display_form" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_close_display_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_normal"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/close"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/colorGrayLighter"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

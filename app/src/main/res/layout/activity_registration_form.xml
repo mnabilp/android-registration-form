@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".ui.RegistrationFormActivity">
+
+    <ImageButton
+        android:id="@+id/btn_back_registration_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title_registration_form"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/title_registraton_form"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/btn_back_registration_form"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_registration_form">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_name_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_nama"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_name_item_registration_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="@string/hint_nama"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_registration_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_nim_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_nim"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_name_item_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_nim_item_registration_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="@string/hint_nim"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nim_registration_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jurusan_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_jurusan"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_nim_item_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_jurusan_item_registration_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="@string/hint_jurusan"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jurusan_registration_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_jenis_kelamin_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_jenis_kelamin"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_jurusan_item_registration_form" />
+
+            <RadioGroup
+                android:id="@+id/rbg_jenis_kelamin_registration_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_jenis_kelamin_registration_form">
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_jenis_kelamin_laki_registration_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/jk_laki"
+                    android:textColor="@color/colorDimWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_jenis_kelamin_registration_form" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_jenis_kelamin_perempuan_registration_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/jk_perempuan"
+                    android:textColor="@color/colorDimWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rb_jenis_kelamin_laki_registration_form" />
+
+                <com.google.android.material.radiobutton.MaterialRadioButton
+                    android:id="@+id/rb_jenis_kelamin_item_registration_form"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/jk_lain"
+                    android:textColor="@color/colorDimWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rb_jenis_kelamin_perempuan_registration_form" />
+
+            </RadioGroup>
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_alamat_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_alamat"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rbg_jenis_kelamin_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_alamat_item_registration_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:hint="@string/hint_alamat"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_alamat_registration_form" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_tanggal_lahir_registration_form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/rubik_regular"
+                android:text="@string/hint_tanggal_lahir"
+                android:textColor="@color/colorDimWhite"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_alamat_item_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_tanggal_lahir_item_registration_form"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:hint="@string/tanggal"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_bulan_lahir_item_registration_form"
+                android:layout_width="128dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:hint="@string/bulan"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_tanggal_lahir_item_registration_form"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_registration_form" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_tahun_lahir_item_registration_form"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="128dp"
+                android:background="@drawable/bg_rectangle_curved"
+                android:fontFamily="@font/rubik_regular"
+                android:gravity="center"
+                android:hint="@string/tahun"
+                android:inputType="textAutoComplete"
+                android:minHeight="@dimen/min_height"
+                android:padding="8dp"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorGrayLighter"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_bulan_lahir_item_registration_form"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_lahir_registration_form" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_save_registration_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_normal"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/button_save"
+        android:textAllCaps="false"
+        android:enabled="false"
+        android:textColor="@color/colorDarkerGray"
+        app:backgroundTint="@color/colorGray"
+        app:cornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

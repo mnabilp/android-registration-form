@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Registration Form</string>
+    <string name="label_title_notes">Title</string>
+    <string name="add_word">ic add</string>
+
+    <string name="hint_nama">Nama</string>
+    <string name="hint_nim">NIM</string>
+    <string name="hint_jurusan">Jurusan</string>
+    <string name="hint_jenis_kelamin">Jenis Kelamin</string>
+    <string name="hint_alamat">Alamat</string>
+    <string name="hint_tanggal_lahir">Tanggal Lahir</string>
+    <string name="title_main">My Notes</string>
+    <string name="button_save">Save</string>
+    <string name="close">Close</string>
+    <string name="empty_not_saved">Note discarded</string>
+    <string name="title_display_form">Tampilan Form</string>
+    <string name="title_registraton_form">Form Registrasi</string>
+    <string name="title_home">Registration Form</string>
+    <string name="isi_form">Isi Form</string>
+
+    <string name="jk_laki">Laki-Laki</string>
+    <string name="jk_perempuan">Perempuan</string>
+    <string name="jk_lain">Lainnya</string>
+
+    <string name="tanggal">Tgl</string>
+    <string name="bulan">Bulan</string>
+    <string name="tahun">Tahun</string>
+</resources>
